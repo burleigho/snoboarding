@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+  <p> Login to {{title}}</p>
+<body>
+  <div class="content">
+    <!-- Multistep Form -->
+    <div class="main">
+<form action="/login" method="post">
+  <fieldset id="first">
+    <h2 class="title">Authenticate</h2>
+      <p class="subtitle"></p>
+  <div class="boxinput">
+    <input type="text" id="username" name="username" placeholder="Enter Username...">
+  </div>
+
+  <div class="boxinput">
+    <input type="password" id="pass" name="password" minlength="8" required placeholder="Enter Password...">
+  </div>
+
+  <div>
+    <input type="submit" value="Sign in">
+  </div>
+  </fieldset>
+</form>
+</div>
+</div>
+</body>

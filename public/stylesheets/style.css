@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  width: 1000px;
+  padding: 15px 0px 15px 0px;
+  font-size: 50px
+}
+
+span {
+  text-align: right;
+  padding-left: 10px;
+}
+
+p {
+  text-align: center;
+  margin: 0 auto;
+  width: 500px;
+  padding-bottom: 2ex;
+  padding-top: 1ex;
+}
+
+.content {
+  width: 1000px;
+  margin: 0 auto
+}
+
+.button {
+  padding: 15px 0px 10px 0px;
+}
+
+body {
+  padding: 60px;
+  color: white;
+  font-family: 'Open Sans Condensed',sans-serif;
+  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/JrbItQz/blue-light-and-flying-particles-loop-background_njwobm17e__F0000.png")
+}
+
+ div {
+   text-align: center;
+ }
+
+ form div+div {
+   margin-top: 1em;
+ }
+
+.main {
+  float: none;
+  width: 1000px;
+}
+
+input#bt {
+  margin: 0;
+}
+
+.boxinput {
+  margin-top: 1em;
+  padding: 0;
+  width: 400px;
+  height: 40px;
+  display: inline-block;
+  text-align: right;
+}
+
+#progressbar {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#active1 {
+  color: red
+}
+
+fieldset {
+  display: none;
+  width: 350px;
+  padding: 20px;
+  margin-top: 50px;
+  padding: 10px 0px 10px 0px;
+  margin-left: 250px;
+  border-radius: 1px;
+  }
+
+#first {
+  display: block;
+  width: 350px;
+  padding: 10px 0px 10px 0px;
+  margin-top: 50px;
+  border-radius: 1px;
+  margin-left: 255px;
+}
+
+input[type=text],
+input[type=password],
+select {
+  width: 100%;
+  margin: auto 0;
+  height: 40px;
+  padding: 0px;
+  border-radius: 4px;
+  border: 0;
+}
+
+textarea {
+  width: 100%;
+  margin: 10px 0;
+  height: 70px;
+  padding: 5px;
+  border: 3px solid white;
+  border-radius: 4px
+}
+
+input[type=submit],
+input[type=button] {
+  width: 120px;
+  margin: 15px 25px;
+  padding: 5px;
+  height: 40px;
+  background-color: #236dec ;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: #fff;
+  
+}
+
+h2,
+p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+li {
+  margin-right: 52px;
+  display: inline;
+  color: #c1c5cc;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "form-data": "^2.3.3",
+    "formidable": "^1.2.1",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
+    "mongodb": "^3.1.12",
+    "mongoose": "^5.4.5",
+    "morgan": "~1.9.0",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0",
+    "util": "^0.11.1",
+    "validator": "^10.11.0",
+    "winston": "^3.1.0",
+    "winston-mongodb": "^4.0.3"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "puppeteer": "^1.11.0"
+  }
+}

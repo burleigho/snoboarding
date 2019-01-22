@@ -1,0 +1,158 @@
+<h1>{{title}} <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/domain">Add Domain</a>
+  <a href="#">Add FO</a>
+  <a href="#">Add Static Data</a>
+  <a href="/location">Add Location</a>
+  <a href="/upload">Upload CIs</a>
+  <a href="/logs">View Logs</a>
+</div>
+<!-- Use any element to open the sidenav -->
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></h1>
+  <h2><!-- Progressbar -->
+    <ul id="progressbar">
+      <li id="active1">Customer Domain</li>
+      <li id="active2">Parent Organisation</li>
+      <li id="active3">Functional Organisation</li>
+      <li id="active4">Location</li>
+      <li id="active5">Static Data</li>
+      <li id="active6">CI Upload</li>
+    </ul>
+  </h2>
+<body>
+  <div class="content">
+    <!-- Multistep Form -->
+    <div class="main">
+      <form action="/" class="regform" method="post">
+        <!-- Fieldsets -->
+        <fieldset id="first">
+          <h2 class="title">Customer Domain</h2>
+          <p class="subtitle">Step 1</p>
+          <div class="boxinput">
+          <select name="instances">
+            <option value="" disabled selected>Select SNOW Instance</option>
+            <option value="GlobalDev">GlobalDev</option>
+            <option value="GlobalInt">GlobalInt</option>
+            <option value="GlobalCat">GlobalCat</option>
+            <option value="GlobalProd">GlobalProd</option>
+          </select>
+          </div>
+          <div class="boxinput">
+            <input type="text" id="domcust" name="cust_domain" placeholder="Enter Customer Domain...">
+          </div>
+          <div class="boxinput">
+            <select name="parent_domain" id="sel">
+              <option value="" disabled selected>Select Parent Domain</option>
+            </select>
+            <p id="msg"></p>
+          </div>
+          <div class="boxinput">
+            <select name="domtype">
+              <option value="" disabled selected>Select Domain Type</option>
+              <option value="NONE">--NONE--</option>
+              <option value="MSP">MSP</option>
+              <option value="Vendor">Vendor</option>
+              <option value="Customer">Customer</option>
+            </select>
+          </div>
+          <div>
+             Is this Primary?
+             True <input type="radio" name="domprimary" value="True">
+             False <input type="radio" name="domprimary" value="False">
+          </div>
+          <div class="boxinput">
+            <input type="text" id="domdes" name="domain_description" placeholder="Description of Domain..."></textarea>
+          </div><br>
+          <input id="next_btn1" onclick="next_step1()" type="button" value="Next">
+        </fieldset>
+        <fieldset id="second">
+          <h2 class="title">Parent Organisation</h2>
+          <p class="subtitle">Step 2</p>
+          <div class="boxinput">
+            <input type="text" id="" name="po_name" placeholder="Enter the Parent Organisation Name...">
+          </div>
+          <div class="boxinput">
+            <input type="text" id= name="po_street" placeholder="Enter the Street Address..."></textarea>
+          </div>
+          <div class="boxinput">
+            <input type="text" name="po_city" placeholder="Enter the City..."></textarea>
+          </div>
+          <div class="boxinput">
+            <input type="text" name="po_country" placeholder="Enter the Country..."></textarea>
+          </div>
+          <div>
+            Is this Primary?
+            True <input type="radio" name="parprimary" value="True"> 
+            False <input type="radio" name="parprimary" value="False"> 
+          </div>
+          <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous">
+          <input id="next_btn2" name="next" onclick="next_step2()" type="button" value="Next">
+        </fieldset>
+        <fieldset id="third">
+          <h2 class="title">Functional Organisation</h2>
+          <p class="subtitle">Step 3</p>
+          <div class="boxinput">
+            <input type="text" id="" name="fo_name" placeholder="Enter the Functional Organisation Name...">
+          </div>
+          <div class="boxinput">
+            <input type="text" id="" name="fo_street" placeholder="Enter the Street Address..."></textarea>
+          </div>
+          <div class="boxinput">
+            <input type="text" name="fo_city" placeholder="Enter the City..."></textarea>
+          </div>
+          <div class="boxinput">
+            <input type="text" name="fo_country" placeholder="Enter the Country..."></textarea>
+          </div><br>
+          <input id="pre_btn2" onclick="prev_step2()" type="button" value="Previous">
+          <input id="next_btn3" name="next" onclick="next_step3()" type="button" value="Next">
+        </fieldset>
+        <fieldset id="fourth">
+          <h2 class="title">Location</h2>
+          <p class="subtitle">Step 4</p>
+          <div class="boxinput">
+            <input type="text" name="lo_name" placeholder="Enter the Location Name...">
+          </div>
+          <div class="boxinput">
+            <input type="text" name="lo_street" placeholder="Enter the Street Address..."></textarea>
+          </div>
+          <div class="boxinput">
+            <input type="text" name="lo_city" placeholder="Enter the City..."></textarea>
+          </div>
+          <div class="boxinput">
+            <input type="text" name="lo_country" placeholder="Enter the Country..."></textarea>
+          </div><br>
+          <input id="pre_btn3" onclick="prev_step3()" type="button" value="Previous">
+          <input id="next_btn4" name="next" onclick="next_step4()" type="button" value="Next">
+        </fieldset>
+        <fieldset id="fifth">
+          <h2 class="title">Static Data</h2>
+          <p class="subtitle">Step 5</p>
+            Add Static Data File (*.xlsx, *.csv) <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> Enter
+            Values <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck">
+            <div id="ifYes" style="visibility:hidden">
+              <br><input type="file" accept=".xlsx,.csv" name="datafile" size="30" id='yes' name='yes'>
+            </div>
+            <div class="boxinput" id="ifNo" style="visability:hidden">
+              <input type='text' id='static' name='static' placeholder="Enter Static Data...">
+            </div><br>
+          <input id="pre_btn4" onclick="prev_step4()" type="button" value="Previous">
+          <input id="next_btn5" name="next" onclick="next_step5()" type="button" value="Next">
+        </fieldset>
+        <fieldset id="sixth">
+          <h2 class="title">CI Upload</h2>
+          <p class="subtitle">Step 6</p>
+             Add CI Data File (*.xlsx, *.csv) <input type="radio" onclick="javascript:yesnoCheck2();" name="yesno" id="yesCheck2"> Enter
+            vCenter FQDN <input type="radio" onclick="javascript:yesnoCheck2();" name="yesno" id="noCheck">
+            <div id="ifYes2" style="visibility:hidden">
+              <br><input type="file" accept=".xlsx,.csv" name="datafile2" size="30" id='yes' name='yes'>
+            </div>
+            <div class="boxinput" id="ifNo2" style="visability:hidden">
+              <input type='text' id='vcenter' name='vcenter' placeholder="Enter vCenter FQDN...">
+            </div><br>
+          <input id="pre_btn5" onclick="prev_step5()" type="button" value="Previous">
+          <input class="submit_btn" onclick="validation(event)" type="submit" value="Submit">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>

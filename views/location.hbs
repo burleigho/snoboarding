@@ -1,0 +1,54 @@
+<h1>{{title}} <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">Wizard</a>
+  <a href="/domain">Add Domain</a>
+  <a href="#">Add FO</a>
+  <a href="#">Add Static Data</a>
+  <a href="/location">Add Location</a>
+  <a href="#">Upload CIs</a>
+</div>
+<!-- Use any element to open the sidenav -->
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></h1>
+  <body>
+    <div class="content">
+      <!-- Multistep Form -->
+      <div class="main">
+        <form action="/location" method="post">
+          <fieldset id="first">
+            <h2 class="title">Location</h2>
+              <p class="subtitle"></p>
+            <div class="boxinput">
+              <select name="instances">
+                <option value="" disabled selected>Select SNOW Instance</option>
+                <option value="GlobalDev">GlobalDev</option>
+                <option value="GlobalInt">GlobalInt</option>
+                <option value="GlobalCat">GlobalCat</option>
+                <option value="GlobalProd">GlobalProd</option>
+              </select>
+            </div>
+            <div class="boxinput">
+              <select name="parent_company" id="sel2">
+                <option value="" disabled selected>Select Company</option>
+              </select>
+              <p id="msg2"></p>
+            </div>
+            <div class="boxinput">
+              <input type="text" name="lo_name" placeholder="Enter the Location Name...">
+            </div>
+            <div class="boxinput">
+              <input type="text" name="lo_street" placeholder="Enter the Street Address..."></textarea>
+            </div>
+            <div class="boxinput">
+              <input type="text" name="lo_city" placeholder="Enter the City..."></textarea>
+            </div>
+            <div class="boxinput">
+              <input type="text" name="lo_country" placeholder="Enter the Country..."></textarea>
+            </div><br>
+            <div class="button">
+              <button type="submit">Add Location</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
